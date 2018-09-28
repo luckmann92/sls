@@ -1,0 +1,39 @@
+footer {
+  .contact-item__icon {
+    align-items: center;
+  }
+  padding-bottom: 80px;
+  a {
+    font-size: 14px;
+  }
+}
+.ft-link-group {
+  display: flex;
+}
+.ft-top {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  border-top:1px solid #cfcfcf;
+}
+.ft-menu_item {
+  display: flex;
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.copyright, .developer {
+  max-width: 100%;
+  color:#a1a1a1;
+  font-size: 16px;
+}
+.developer {
+  a {
+    font-family: 'Akrobat', sans-serif;
+    font-weight: 500;
+    color:#e01e24;
+    text-transform: uppercase;
+  }
+}

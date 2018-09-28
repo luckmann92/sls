@@ -1,0 +1,13 @@
+{% extends "layouts/main.twig" %}
+
+{% block layouts %}
+    <div class="page page--inside">
+        {% include "_template/modules/page-head.twig" %}
+
+        <div class="page-content">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}

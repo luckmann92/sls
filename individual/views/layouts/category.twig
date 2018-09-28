@@ -1,0 +1,23 @@
+{% extends "layouts/main.twig" %}
+
+{% block layouts %}
+    <div class="page page--inside">
+		{% include "_template/modules/page-head.twig" %}
+
+		<div class="page-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+                        {% include "_template/modules/aside.twig" %}
+					</div>
+					<div class="col-md-9">
+                        {% block content %}
+
+                        {% endblock %}
+                        {% include "_template/modules/pagination.twig" %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

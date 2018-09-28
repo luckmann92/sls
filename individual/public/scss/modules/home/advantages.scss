@@ -1,0 +1,47 @@
+.section-advantages {
+  padding-bottom: 219px;
+  overflow: hidden;
+}
+.advantages-list {
+  position: relative;
+  padding: 80px 100px 85px;
+  background-color: #e01e24;
+  color:#fff;
+  z-index:3;
+  &:before, &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+  &:before {
+    left: calc(50% - 555px);
+    bottom: -219px;
+    border-width: 219px 555px 0 0;
+    border-color: #e01e24 transparent transparent transparent;
+  }
+  &:after {
+    right: calc(50% - 555px);
+    bottom: 0;
+    border-width: 0 0 219px 555px;
+    border-color: transparent transparent #ededed transparent;
+  }
+}
+
+.advantage-item {
+  margin-bottom: 70px;
+}
+.advantage-item__icon {
+  margin-bottom: 35px;
+  span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height:70px;
+    border-radius: 50%;
+    border:1px solid #e96266;
+  }
+}

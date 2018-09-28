@@ -1,0 +1,16 @@
+@media (min-width: 1200px) and (max-width: 1570px) {
+  header {
+    .container {
+      max-width: 990px;
+    }
+    .head-logo {
+      max-width:150px;
+    }
+    .btn-menu, .btn-feedback {
+      width:70px;
+      span {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.navN {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  li {
+    position: relative;
+    display: flex;
+    margin: 0 9px;
+    a {
+      position: relative;
+      display: flex;
+      font-family: 'Akrobat', sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      justify-content: center;
+      align-items: center;
+      width:28px;
+      height:42px;
+      background: #fff;
+      &:after, &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top:0;
+        width:0;
+        height:0;
+        border-style: solid;
+        z-index:1;
+        transition: 300ms;
+      }
+      &:before {
+        left:-15px;
+        border-width: 0 0 42px 15px;
+        border-color: transparent transparent #fff transparent;
+      }
+      &:after {
+        right:-15px;
+        border-width: 42px 15px 0 0;
+        border-color: #fff transparent transparent transparent;
+      }
+      &:hover, &:active, &:focus, &.on {
+        background:#fcde20;
+        &:before {
+          border-color: transparent transparent #fcde20 transparent;
+        }
+        &:after {
+          border-color: #fcde20 transparent transparent transparent;
+        }
+      }
+    }
+
+  }
+}

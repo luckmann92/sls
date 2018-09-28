@@ -1,0 +1,102 @@
+.section-map {
+  position: relative;
+  background-color: #e01e24;
+  padding-top: 180px;
+  padding-bottom: 100px;
+  margin-top: -130px;
+  overflow: hidden;
+  z-index:0;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    left: calc(50% - 960px);
+    z-index: 0;
+    top: 0;
+    border-width: 0 1920px 760px 0;
+    border-color: transparent #ededed transparent transparent;
+  }
+}
+.f-gradient {
+  margin-top: 24px;
+  background: linear-gradient(22deg,#fff 49.5%,#000 49.8%,#000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.map-item {
+  position: relative;
+  margin-top: 140px;
+  padding-top: 140px;
+  height:516px;
+  background-position: 50% 50%;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+.map-item__caption {
+  color:#fff;
+  a {
+    display: block;
+    color:#fff;
+    font-family: 'Akrobat', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    &.map-item__email {
+      color:#fcde20;
+    }
+  }
+}
+.map-item__caption-title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.wt {
+  height:50px;
+}
+.map-item__label {
+  position: relative;
+  font-family: 'Akrobat', sans-serif;
+  font-size: 12px;
+  height:42px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#333;
+  background-color: #fcde20;
+  width:123px;
+  margin: 0;
+  &:after, &:before, span:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top:0;
+    width:0;
+    height:0;
+    border-style: solid;
+    z-index:1;
+  }
+  &:before {
+    left:-16px;
+    border-width: 0 0 42px 16px;
+    border-color: transparent transparent #fcde20 transparent;
+  }
+  &:after {
+    right:-16px;
+    border-width: 42px 16px 0 0;
+    border-color: #fcde20 transparent transparent transparent;
+  }
+  span {
+    &:before {
+      top:auto;
+      bottom:-12px;
+      left:calc(50% - 13px);
+      border-width: 12px 13px 0 13px;
+      border-color: #fcde20 transparent transparent transparent;
+    }
+  }
+}

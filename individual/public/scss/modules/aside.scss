@@ -1,0 +1,38 @@
+.aside-nav {
+  &>ul {
+    list-style-type: none;
+    margin: 0;
+    &>li {
+      a {
+        position: relative;
+        display: block;
+        font-family: 'Akrobat', sans-serif;
+        font-size: 14px;
+        padding: 5px 15px 5px 30px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #333;
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top:0;
+          width:0;
+          height:0;
+          border-style: solid;
+          z-index:1;
+          right:-15px;
+          border-width: 42px 15px 0 0;
+          border-color: transparent transparent transparent transparent;
+          transition: 300ms;
+        }
+        &.on, &:hover, &:focus, &:active {
+          background: #fcde20;
+          &:before {
+            border-color: #fcde20 transparent transparent transparent;
+          }
+        }
+      }
+    }
+  }
+}

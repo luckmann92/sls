@@ -1,0 +1,43 @@
+// LIBS
+@import "../libs/normalize";
+@import "../libs/animate";
+@import "../libs/bootstrap/bootstrap-grid.min";
+@import "../libs/fancybox/jquery.fancybox";
+@import "../libs/arcticmodal/jquery.arcticmodal-0.3";
+@import "../libs/slick/slick";
+
+@import "reset";
+@import "fonts";
+
+@import "modules/header";
+@import "modules/footer";
+
+@import "modules/page-head";
+@import "modules/page";
+
+@import "modules/buttons";
+@import "modules/modals";
+@import "modules/home";
+@import "modules/aside";
+@import "modules/pagination";
+
+@import "modules/home/slider";
+@import "modules/home/about";
+@import "modules/home/advantages";
+@import "modules/home/about_2";
+@import "modules/home/projects";
+@import "modules/home/map";
+@import "modules/home/form";
+
+@import "modules/catalog/index";
+@import "modules/catalog/category";
+@import "modules/catalog/product";
+
+@import "modules/projects/index";
+
+@import "media/1350";
+@import "media/1199";
+@import "media/991";
+@import "media/767";
+@import "media/575";
+
