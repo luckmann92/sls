@@ -35,6 +35,8 @@ $(document).ready(function() {
     
     /* MODAL */
     $(document).on('click', '.js-init-modal', function () {
+        var modal = $(this).attr('data-modal'),
+            title = $(this).attr('data-modal-title') || 'Обратная связь';
         $.arcticmodal({
             type: 'ajax',
             url: '../modals/' + $(this).attr('data-modal') + '.html',
@@ -44,6 +46,7 @@ $(document).ready(function() {
                     opacity: 1
                 }
             },
+            closeOnOverlayClick: false,
             ajax: {
                 type: 'GET',
                 cache: false,
@@ -51,9 +54,13 @@ $(document).ready(function() {
                 success: function(data, el, responce) {
                     var h = $('<div class="box-modal">' +
                         '<div class="box-modal_close arcticmodal-close"><span></span></div>' +
+                        '<span class="box-modal_title"></span>' +
                         '<div class="box-modal_content"></div>' +
                         '</div>');
+                    $('.box-modal_title', h).html(title);
                     $('.box-modal_content', h).html(responce);
+
+
                     data.body.html(h);
                     $(":input").inputmask();
                 }
@@ -62,6 +69,7 @@ $(document).ready(function() {
         return false;
     });
 
+    /* RESPONSIVE MENU */
     $('.js-init-responsive_menu').click(function () {
         if($(this).hasClass('open')){
             $(this).removeClass('open');
@@ -69,6 +77,13 @@ $(document).ready(function() {
             $(this).addClass('open');
         }
         responsiveMenu.slideToggle();
+    });
+
+    /* SCROLL DOWN */
+    $('.js-init-scroll_down').click(function () {
+        $('html, body').animate({
+            scrollTop: $(window).outerHeight()
+        }, 1500);
     });
 
     /* LABELS HOME */
