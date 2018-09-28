@@ -1,0 +1,63 @@
+.page-contact {
+  .category-item {
+    z-index: 2;
+  }
+  .feedback-form {
+    margin-bottom: 0;
+    .section-title {
+      color:#333;
+    }
+    background: transparent;
+    &:before, &:after {
+      display: none;
+    }
+    .inp, .textarea {
+      border-color:#e01e24;
+      color:#333;
+      &::placeholder {
+        color:#e01e24;
+      }
+    }
+    .btn-submit {
+      background-color: #fcde20;
+      &:before {
+        border-color: transparent transparent #fcde20;
+      }
+      &:after {
+        border-color: #fcde20 transparent transparent;
+      }
+      &:hover, &:focus, &:active {
+        background-color: #e01e24;
+        color:#fff;
+        &:before {
+          border-color: transparent transparent #e01e24;
+        }
+        &:after {
+          border-color: #e01e24 transparent transparent;
+        }
+      }
+    }
+  }
+}
+.map-section {
+  position: relative;
+  margin-top: 150px;
+  margin-bottom: 280px;
+  .category:nth-child(2n+1) .category-item-content:before {
+    border-width: 350px 126px 0 0;
+  }
+}
+.map-section-content-wrapper {
+  position: absolute;
+  top:-120px;
+  width:100%;
+}
+.map-section-content {
+  position: relative;
+  .map-item-frame {
+    position: absolute;
+    width:1510px;
+    right:0;
+    filter: grayscale(100%);
+  }
+}
