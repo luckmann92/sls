@@ -1,16 +1,24 @@
 .product-item {
   background-color: #fff;
   margin-bottom: 30px;
+  transition: 300ms;
+  &:hover, &:active, &:focus {
+    box-shadow: 0 10px 40px #bfbfbf;
+  }
 }
 .product-content {
   padding: 34px 29px 39px;
 }
 .product-item_img {
   display: flex;
+  height:230px;
 }
 .product-item_desc {
-  border:1px solid #ededed;
+  border-top:1px solid #ededed;
 }
 .product-item_text {
   margin-bottom: 50px;
+}
+.product-item_name  {
+  max-width: 100%;
 }
