@@ -3,12 +3,15 @@
     list-style-type: none;
     margin: 0;
     &>li {
+      overflow: hidden;
+      padding-right: 22px;
       a {
         position: relative;
         display: block;
         font-family: 'Akrobat', sans-serif;
         font-size: 14px;
-        padding: 5px 15px 5px 30px;
+        line-height: 20px;
+        padding: 9px 15px 9px 30px;
         text-decoration: none;
         text-transform: uppercase;
         color: #333;
@@ -16,13 +19,13 @@
           content: '';
           display: block;
           position: absolute;
-          top:0;
+          bottom:0;
           width:0;
           height:0;
           border-style: solid;
           z-index:1;
-          right:-15px;
-          border-width: 42px 15px 0 0;
+          right:-22px;
+          border-width: 65px 22px 0 0;
           border-color: transparent transparent transparent transparent;
           transition: 300ms;
         }
